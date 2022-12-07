@@ -1,0 +1,123 @@
+.navbar {
+    height: 80px;
+    position: fixed;
+    width: 100vw;
+    z-index: 3;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.navbar .wrapper.active {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .left,
+.navbar .right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.navbar .center,
+.start {
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #2879fe;
+    font-weight: 700;
+}
+.navbar .item {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.navbar .right .icons {
+    display: flex;
+    gap: 15px;
+    color: #777;
+    cursor: pointer;
+}
+.navbar .right .icons .cartIcon {
+    position: relative;
+}
+.navbar .cartIcon span {
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2879fe;
+    color: white;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-menu {
+    display: none;
+}
+.nav-menu .menu {
+    cursor: pointer;
+}
+.nav-menu .menu svg {
+    width: 40px;
+    height: 50px;
+    color: #2879fe;
+}
+.wrapper.inactive {
+    display: none;
+}
+/* responsive */
+
+@media (max-width: 1023px) {
+    .navbar {
+        height: fit-content;
+    }
+    .navbar .wrapper.active {
+        display: block;
+    }
+    .nav-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        padding: 5px 30px;
+    }
+    .navbar .left,
+    .navbar .right {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+    .navbar .center {
+        display: none;
+    }
+    .navbar .right .icons {
+        gap: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .navbar .wrapper {
+        padding: 5px 10px;
+    }
+    .navbar .left,
+    .navbar .right {
+        gap: 10px;
+    }
+    .navbar .right .icons {
+        gap: 10px;
+    }
+}
+@media (max-width: 631px) {
+    .nav-menu {
+        padding: 5px 25px;
+    }
+    .nav-menu .menu .start {
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .nav-menu .menu svg {
+        width: 30px;
+        height: 40px;
+    }
+}
